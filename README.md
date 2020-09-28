@@ -11,6 +11,7 @@ bintrayKey和bintrayUser可以在local.properties中直接设置
 ## 使用方式
 #### gradle
 、、、
+
 buildscript {
     repositories {
         maven { url 'https://dl.bintray.com/ooftf/maven' }
@@ -25,9 +26,12 @@ buildscript {
     publish {
         publishVersion = '0.0.1'
     }
+    
 、、、
 #### local.properties中设置
 、、、
+
 bintrayKey=uyelsjfh34iosan3io8so3
 bintrayUser=ooftf
+
 、、、
