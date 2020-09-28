@@ -12,14 +12,14 @@ bintrayKey和bintrayUser可以在local.properties中直接设置
 #### gradle
 、、、
 
-buildscript {
-    repositories {
-        maven { url 'https://dl.bintray.com/ooftf/maven' }
+    buildscript {
+        repositories {
+            maven { url 'https://dl.bintray.com/ooftf/maven' }
+        }
+        dependencies {
+            classpath 'com.ooftf:publish-bintray:0.0.1'
+        }
     }
-    dependencies {
-        classpath 'com.ooftf:publish-bintray:0.0.1'
-    }
-}
 
 
     apply plugin: 'ooftf-publish'
@@ -31,7 +31,7 @@ buildscript {
 #### local.properties中设置
 、、、
 
-bintrayKey=uyelsjfh34iosan3io8so3
-bintrayUser=ooftf
+    bintrayKey=uyelsjfh34iosan3io8so3
+    bintrayUser=ooftf
 
 、、、
