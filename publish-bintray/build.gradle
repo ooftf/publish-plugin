@@ -1,0 +1,13 @@
+apply plugin: 'groovy'
+apply from: 'publish.gradle'
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
+}
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

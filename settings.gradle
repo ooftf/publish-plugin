@@ -1,0 +1,3 @@
+include ':publish-bintray'
+include ':app'
+rootProject.name = "publish-plugin"
