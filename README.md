@@ -1,3 +1,4 @@
+# publish-bintray [ ![Download](https://api.bintray.com/packages/ooftf/maven/publish-plugin/images/download.svg) ](https://bintray.com/ooftf/maven/publish-plugin/_latestVersion)
 ## 区别
 针对我自己，添加了大量的默认值  
 具体默认值可参考 PublishExtension.initDefault方法  
@@ -15,7 +16,7 @@ buildscript {
         maven { url 'https://dl.bintray.com/ooftf/maven' }
     }
     dependencies {
-        classpath 'com.ooftf:publish-plugin:0.0.1'
+        classpath 'com.ooftf:publish-bintray:0.0.1'
     }
 }
 
