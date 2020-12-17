@@ -1,3 +1,4 @@
+include ':bintray-test'
 include ':publish-bintray'
 include ':app'
 rootProject.name = "publish-plugin"
