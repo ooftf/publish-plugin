@@ -2,6 +2,7 @@ package com.ooftf.publish.bintray
 
 import groovy.transform.PackageScope
 import org.gradle.api.Project
+import org.gradle.api.publish.tasks.GenerateModuleMetadata
 import org.gradle.api.tasks.javadoc.Javadoc
 
 /**
@@ -41,7 +42,7 @@ class PublishExtension {
     String bintrayUser = ''
     String bintrayKey = ''
     boolean dryRun = false
-    boolean override = true
+    boolean override = false
     boolean sign = false
 
     String[] publications
@@ -122,12 +123,6 @@ class PublishExtension {
         }
         System.out.println('bintrayKey::' + key)
         System.out.println('bintrayUser::' + user)
-        project.tasks.withType(Javadoc) {
-            enabled = false
-            options.addStringOption('Xdoclint:none', '-quiet')
-            options.addStringOption('encoding', 'UTF-8')
-            options.addStringOption('charSet', 'UTF-8')
-        }
     }
 
 }

@@ -1,5 +1,5 @@
 apply plugin: 'ooftf-publish'
 publish {
-    publishVersion = '0.0.3'
+    publishVersion = '1.0.0'
 }
 

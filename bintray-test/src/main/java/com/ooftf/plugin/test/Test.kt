@@ -6,6 +6,6 @@ package com.ooftf.plugin.test
  * @email 994749769@qq.com
  * @date 2020/12/17
  */
-class Test {
+object Test {
     fun show(i: String): String = i
 }

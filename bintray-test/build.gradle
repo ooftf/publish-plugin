@@ -2,30 +2,13 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
 }
-/*apply plugin: 'ooftf-publish'
+apply plugin: 'ooftf-publish'
 publish {
-    publishVersion = '0.0.1-local2'
+    publishVersion = '1.0.2'
     groupId = 'com.ooftf'
     artifactId = 'bintray-test'
-    desc = 'Oh hi, this is a nice description for a project, right?'
-    website = 'https://github.com/panpf/bintraypublishsampleandroid'
-    userOrg = 'ooftf'
-    bintrayUser = 'ooftf'
     override = false
-    dryRun = false
     bintrayKey = '965661686'
-}*/
-apply plugin: 'com.github.panpf.bintray-publish'
-publish {
-    userOrg = 'ooftf'
-    groupId = 'com.ooftf'
-    artifactId = 'bintray-test'
-    publishVersion = '0.0.1-local3'
-    desc = 'Oh hi, this is a nice description for a project, right?'
-    website = 'https://github.com/panpf/bintray-publish'
-    bintrayUser='ooftf'
-    bintrayKey='123456'
-
 }
 android {
     compileSdkVersion 29

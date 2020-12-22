@@ -8,6 +8,8 @@ import org.gradle.api.Project
 import org.gradle.api.publish.PublicationContainer
 import org.gradle.api.publish.PublishingExtension
 import org.gradle.api.publish.maven.MavenPublication
+import org.gradle.api.publish.tasks.GenerateModuleMetadata
+import org.gradle.api.tasks.javadoc.Javadoc
 
 class ReleasePlugin implements Plugin<Project> {
 
@@ -15,6 +17,15 @@ class ReleasePlugin implements Plugin<Project> {
     void apply(Project project) {
         PublishExtension extension = project.extensions.create('publish', PublishExtension)
         project.afterEvaluate {
+            project.tasks.withType(Javadoc) {
+                enabled = false
+                options.addStringOption('Xdoclint:none', '-quiet')
+                options.addStringOption('encoding', 'UTF-8')
+                options.addStringOption('charSet', 'UTF-8')
+            }
+            project.tasks.withType(GenerateModuleMetadata) {
+                enabled = false
+            }
             extension.initDefault(project)
             extension.validate()
             attachArtifacts(extension, project)
